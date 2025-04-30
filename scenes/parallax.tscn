@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dttn4vfkgirhl"]
+
+[ext_resource type="Texture2D" uid="uid://oee7eyxwc5pl" path="res://assets/background_set/B1013-1.png" id="1_m2aw8"]
+[ext_resource type="Texture2D" uid="uid://di6likwpcxprl" path="res://assets/background_set/M1010.png" id="3_quimm"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = -1
+repeat_times = 32
+
+[node name="céu" type="ParallaxLayer" parent="Parallax2D"]
+motion_mirroring = Vector2(32, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/céu"]
+scale = Vector2(1.39844, 1.39844)
+texture = ExtResource("1_m2aw8")
+centered = false
+
+[node name="lua" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/lua"]
+texture_filter = 1
+position = Vector2(53, 42)
+scale = Vector2(0.140625, 0.140625)
+texture = ExtResource("3_quimm")
+centered = false
