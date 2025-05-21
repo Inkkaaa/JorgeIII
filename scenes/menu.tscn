@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://dtvasnfgk4i7p"]
+
+[ext_resource type="Texture2D" uid="uid://fjj4xvltcso8" path="res://assets/background_set/Mountain-Dusk.png" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://cnhukuq57auwx" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://bb631714yayhb" path="res://assets/sprites/knight.png" id="2_vjb58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_con2f"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhnvy"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("2_vjb58")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v86rl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_con2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhnvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3eks")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 321.0
+offset_bottom = 241.0
+scale = Vector2(3.5911, 2.68075)
+texture = ExtResource("1_yqeox")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 108.0
+offset_top = 126.0
+offset_right = 432.0
+offset_bottom = 161.0
+scale = Vector2(1.41098, 2.95144)
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 16
+text = "              Jorge III 
+O Cavaleiro Ganancioso"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 242.0
+offset_right = 273.0
+offset_bottom = 461.0
+scale = Vector2(2.54353, 2.54353)
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="JOGAR" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "JOGAR"
+
+[node name="SAIR DO JOGO" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "SAIR DO JOGO"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer/HBoxContainer"]
+position = Vector2(298.916, 59.8104)
+scale = Vector2(4.98757, 4.98757)
+sprite_frames = SubResource("SpriteFrames_v86rl")
+autoplay = "default"
+flip_h = true
