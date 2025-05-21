@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://di7qwkrsw31vs"]
+[gd_scene load_steps=21 format=3 uid="uid://di7qwkrsw31vs"]
 
 [ext_resource type="Script" uid="uid://b01bx4gd6ufue" path="res://scripts/game_manager.gd" id="1_u5sy4"]
 [ext_resource type="FontFile" uid="uid://bliqlkqpct0sj" path="res://assets/fonts/PixelOperator8.ttf" id="2_gee14"]
@@ -219,6 +219,9 @@ _data = {
 &"subir": SubResource("Animation_lnu2h")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
+size = Vector2(33, 37)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -359,3 +362,10 @@ motion_mirroring = Vector2(396, 0)
 position = Vector2(92, -23.3953)
 scale = Vector2(1.65, 1.75)
 texture = ExtResource("12_kvuet")
+
+[node name="final" type="Area2D" parent="."]
+position = Vector2(-25, -236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="final"]
+position = Vector2(-6.5, 8.5)
+shape = SubResource("RectangleShape2D_kvuet")
