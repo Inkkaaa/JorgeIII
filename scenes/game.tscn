@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://di7qwkrsw31vs"]
+[gd_scene load_steps=20 format=3 uid="uid://di7qwkrsw31vs"]
 
 [ext_resource type="Script" uid="uid://b01bx4gd6ufue" path="res://scripts/game_manager.gd" id="1_u5sy4"]
 [ext_resource type="FontFile" uid="uid://bliqlkqpct0sj" path="res://assets/fonts/PixelOperator8.ttf" id="2_gee14"]
@@ -9,7 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://bboyogm8ul4la" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d0woyy3j24235" path="res://scenes/jorge.tscn" id="6_u5sy4"]
 [ext_resource type="FontFile" uid="uid://cnhukuq57auwx" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://deqq8wxghyu0o" path="res://assets/background_set/far-clouds.png" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://bympyf3042ia" path="res://assets/background_set/mountains.png" id="10_vtaks"]
+[ext_resource type="Texture2D" uid="uid://bmnw1nytpi134" path="res://assets/background_set/near-clouds.png" id="11_kvuet"]
+[ext_resource type="Texture2D" uid="uid://debc01fxrop8l" path="res://assets/background_set/trees.png" id="12_kvuet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("2_lnu2h")
@@ -216,9 +219,6 @@ _data = {
 &"subir": SubResource("Animation_lnu2h")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vtaks"]
-load_path = "res://.godot/imported/M1010.png-873d651128e14962525e3eb6b014eb4e.ctex"
-
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -240,7 +240,7 @@ vertical_alignment = 1
 position = Vector2(-10, -16)
 
 [node name="Camera2D" type="Camera2D" parent="Jorge"]
-position = Vector2(0, 6)
+position = Vector2(0, -11)
 zoom = Vector2(4, 4)
 limit_bottom = 120
 position_smoothing_enabled = true
@@ -317,20 +317,45 @@ text = "PARABÉNS!!"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+[node name="céu" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-94, 319)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(332, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/céu"]
+position = Vector2(-61, -777)
+scale = Vector2(2.594, 2.45)
+texture = ExtResource("10_dinhu")
+centered = false
+
+[node name="nuvens" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-94, 319)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(320, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nuvens"]
+position = Vector2(-61, -586.727)
+scale = Vector2(2.22222, 2.09886)
+texture = ExtResource("11_kvuet")
+centered = false
+
 [node name="montanha" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-47, 130)
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(300, 0)
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/montanha"]
-position = Vector2(-118, -131)
+position = Vector2(-108, -326)
+scale = Vector2(1.25, 1.36)
 texture = ExtResource("10_vtaks")
 centered = false
 
-[node name="lua" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="árvores" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-50, -57)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(396, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/lua"]
-position = Vector2(-146, -258)
-scale = Vector2(0.2, 0.2)
-texture = SubResource("CompressedTexture2D_vtaks")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/árvores"]
+position = Vector2(92, -23.3953)
+scale = Vector2(1.65, 1.75)
+texture = ExtResource("12_kvuet")
