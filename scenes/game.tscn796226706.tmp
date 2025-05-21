@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bympyf3042ia" path="res://assets/background_set/mountains.png" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bmnw1nytpi134" path="res://assets/background_set/near-clouds.png" id="11_kvuet"]
 [ext_resource type="Texture2D" uid="uid://debc01fxrop8l" path="res://assets/background_set/trees.png" id="12_kvuet"]
-[ext_resource type="Script" uid="uid://ccevo16xl0e7s" path="res://scripts/control.gd" id="14_ir15t"]
+[ext_resource type="Script" uid="uid://ccevo16xl0e7s" path="res://scenes/control.gd" id="14_ir15t"]
 [ext_resource type="Texture2D" uid="uid://hbcbt3dtop83" path="res://assets/sprites/coin.png" id="14_trtic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]

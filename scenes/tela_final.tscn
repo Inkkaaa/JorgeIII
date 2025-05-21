@@ -1,28 +1,28 @@
-[gd_scene load_steps=16 format=3 uid="uid://dtvasnfgk4i7p"]
+[gd_scene load_steps=16 format=3 uid="uid://d3yw8t0aqrg1u"]
 
-[ext_resource type="Script" uid="uid://br1rkoics2abw" path="res://scripts/menu.gd" id="1_g3eks"]
-[ext_resource type="Texture2D" uid="uid://fjj4xvltcso8" path="res://assets/background_set/Mountain-Dusk.png" id="1_yqeox"]
-[ext_resource type="FontFile" uid="uid://cnhukuq57auwx" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_con2f"]
-[ext_resource type="Texture2D" uid="uid://bb631714yayhb" path="res://assets/sprites/knight.png" id="2_vjb58"]
-[ext_resource type="Theme" uid="uid://ctb116aaccnwe" path="res://assets/menu.tres" id="3_4ytvr"]
-[ext_resource type="FontFile" uid="uid://bliqlkqpct0sj" path="res://assets/fonts/PixelOperator8.ttf" id="3_mhnvy"]
+[ext_resource type="Script" uid="uid://br1rkoics2abw" path="res://scripts/menu.gd" id="1_qblif"]
+[ext_resource type="Texture2D" uid="uid://fjj4xvltcso8" path="res://assets/background_set/Mountain-Dusk.png" id="2_e1n2v"]
+[ext_resource type="FontFile" uid="uid://cnhukuq57auwx" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_ak3p8"]
+[ext_resource type="Theme" uid="uid://ctb116aaccnwe" path="res://assets/menu.tres" id="4_kj2o1"]
+[ext_resource type="FontFile" uid="uid://bliqlkqpct0sj" path="res://assets/fonts/PixelOperator8.ttf" id="5_2aqx0"]
+[ext_resource type="Texture2D" uid="uid://bb631714yayhb" path="res://assets/sprites/knight.png" id="6_2tmoy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_con2f"]
-atlas = ExtResource("2_vjb58")
+atlas = ExtResource("6_2tmoy")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhnvy"]
-atlas = ExtResource("2_vjb58")
+atlas = ExtResource("6_2tmoy")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
-atlas = ExtResource("2_vjb58")
+atlas = ExtResource("6_2tmoy")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
-atlas = ExtResource("2_vjb58")
+atlas = ExtResource("6_2tmoy")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v86rl"]
@@ -154,19 +154,19 @@ _data = {
 &"menu_animação": SubResource("Animation_g3eks")
 }
 
-[node name="Menu" type="Control"]
+[node name="Tela final" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_g3eks")
+script = ExtResource("1_qblif")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 321.0
 offset_bottom = 241.0
 scale = Vector2(3.5911, 2.68075)
-texture = ExtResource("1_yqeox")
+texture = ExtResource("2_e1n2v")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -175,7 +175,7 @@ offset_top = 126.0
 offset_right = -176.0
 offset_bottom = 161.0
 scale = Vector2(1.41098, 2.95144)
-theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_fonts/font = ExtResource("3_ak3p8")
 theme_override_font_sizes/font_size = 16
 text = "              Jorge III 
 O Cavaleiro Ganancioso"
@@ -205,8 +205,8 @@ size_flags_horizontal = 6
 
 [node name="JOGAR" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_4ytvr")
-theme_override_fonts/font = ExtResource("3_mhnvy")
+theme = ExtResource("4_kj2o1")
+theme_override_fonts/font = ExtResource("5_2aqx0")
 text = "JOGAR"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -215,8 +215,8 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_4ytvr")
 
 [node name="SAIR DO JOGO" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_4ytvr")
-theme_override_fonts/font = ExtResource("3_mhnvy")
+theme = ExtResource("4_kj2o1")
+theme_override_fonts/font = ExtResource("5_2aqx0")
 theme_override_font_sizes/font_size = 16
 text = "SAIR DO JOGO"
 
