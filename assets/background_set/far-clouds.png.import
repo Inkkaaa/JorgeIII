@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5haxrorafgq2"
-path="res://.godot/imported/B1010.png-a83fc7ac2a424f798850dc326f376534.ctex"
+uid="uid://deqq8wxghyu0o"
+path="res://.godot/imported/far-clouds.png-2c906a1a6f199eccce053fc654544e3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_set/B1010.png"
-dest_files=["res://.godot/imported/B1010.png-a83fc7ac2a424f798850dc326f376534.ctex"]
+source_file="res://assets/background_set/far-clouds.png"
+dest_files=["res://.godot/imported/far-clouds.png-2c906a1a6f199eccce053fc654544e3c.ctex"]
 
 [params]
 

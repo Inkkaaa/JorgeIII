@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj16s355xwfua"
-path="res://.godot/imported/B1011-1.png-175cb4138972987529f97e9b528dbd27.ctex"
+uid="uid://b2arhbo62jon3"
+path="res://.godot/imported/far-mountains.png-2b504fc6d372120296e6c6542464be64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_set/B1011-1.png"
-dest_files=["res://.godot/imported/B1011-1.png-175cb4138972987529f97e9b528dbd27.ctex"]
+source_file="res://assets/background_set/far-mountains.png"
+dest_files=["res://.godot/imported/far-mountains.png-2b504fc6d372120296e6c6542464be64.ctex"]
 
 [params]
 
